@@ -5,6 +5,7 @@ Reference: https://www.youtube.com/watch?v=FB9GpmL0Qe0
 ## Programming/Development Process
 
 * Dependencies
+  <br>
   Before we start anything, first we must set up the dependencies required by HiveDB. Go to the `pubspec.yaml` and add the following on the dependencies
 ```
   hive: ^2.2.3
@@ -22,20 +23,21 @@ Reference: https://www.youtube.com/watch?v=FB9GpmL0Qe0
   After completing all the steps, Android Studio will update the dependencies accordingly after closing `pubspec.yaml`
 
 * Initialization
+  <br>
   To initiate the HiveDB we can use the following line
   ``await Hive.initFlutter();``
 
   We can then proceed to create `box`, which will store/contain all of our data. To create a `box`,
 ```
-// Example
 var box = await Hive.openBox('newBox');
 ```
   You will also need to import library, either by clicking the lamp sign on Android Studio or manually inputting
-``
+```
 import 'package:hive_flutter/hive_flutter.dart';
-``
+```
   
 * Using CRUD
+  <br>
   We then create a couple of buttons to show that the HiveDB is working. For the CRUD, we will refer to the previously created box with `_newBox`. In this example there will be 3 buttons:
   * Write
     ```
